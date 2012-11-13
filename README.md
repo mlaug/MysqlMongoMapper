@@ -1,7 +1,12 @@
 MysqlMongoMapper
 ================
 
-Maps a mysql database into a mongo nosql database with a simple xml configuration
+Maps a mysql database into a mongo nosql database with a simple xml configuration. 
+
+During the development at lieferando.de (yd yourdelivery GmbH) we investigated in a scalable way to provide json in our API. So we decided to
+materialize all needed data into a mongodb and deliver those documents directly on API calls. So all data has been preprocessed
+and is available instantly. Sadly this part of code never exceeded prototype status, so we decided to share it with the community. 
+Fell free to use it for any project
 
 Creating an example
 -------------------
