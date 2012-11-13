@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- TODO: write a xsd file to validate namespace and input -->
+
+<documents>
+
+	<document name="simple">
+		<basequery>select name, prename from customer</basequery>
+	</document>
+
+	<document name="complex">
+		<basequery>select id, name, prename from customer</basequery>
+		<reference placeholder="_ID_" map="id" />
+		<listing name="children">
+			<query>select name, prename from customer where bossId=_ID_</query>
+		</listing>
+	</document>
+
+</documents>
