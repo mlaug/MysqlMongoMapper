@@ -15,8 +15,10 @@ Creating an example
 
 2. Import the example database resources/data/example.sql
 
-3. start the application mvn with 
-    exec:java -Dexec.mainClass="de.yourdelivery.mapper.DatabaseWorker"
+3. start the application 
+    
+
+    mvn exec:java -Dexec.mainClass="de.yourdelivery.mapper.DatabaseWorker"
     
 Expected result
 ---------------
