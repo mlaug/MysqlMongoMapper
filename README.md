@@ -23,6 +23,25 @@ Creating an example
 Expected result
 ---------------
 
+Based on the defined mapping.xml file we generate documents from rows out of mysql into mongodb:
+
+    <documents>
+    
+        <document name="simple">
+    		<basequery>select name, prename from customer</basequery>
+    	</document>
+    
+    	<document name="complex">
+    		<basequery>select id, name, prename from customer</basequery>
+    		<reference placeholder="_ID_" map="id" />
+    		<listing name="children">
+    			<query>select name, prename from customer where bossId=_ID_</query>
+    		</listing>
+    	</document>
+    
+    </documents>
+
+
 In your mongodb you should find a new database "mapper" with two collections "simple" and "complex". Both should inherit three documents, the complex one with the expected
 children in reference
 
