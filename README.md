@@ -41,6 +41,12 @@ Based on the defined mapping.xml file we generate documents from rows out of mys
     
     </documents>
 
+Inside this xml file you can use different art of select statements like
+
+    select name, prename from
+    select name as lastname, prename as firstname
+    select a.name, b.prename
+
 
 In your mongodb you should find a new database "mapper" with two collections "simple" and "complex". Both should inherit three documents, the complex one with the expected
 children in reference
